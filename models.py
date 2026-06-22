@@ -7,7 +7,7 @@ class Categoria(Base):
     __tablename__ = "categorias"
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String, unique=True, index=True)
-    productos = relationship("Producto", back_populates="categorias")
+    productos = relationship("Producto", back_populates="categoria")
 
 
 class Producto(Base):
